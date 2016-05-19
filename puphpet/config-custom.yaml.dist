@@ -1,0 +1,5 @@
+vagrantfile:
+    vm:
+        provider:
+            local:
+                chosen_virtualizer: vmware_fusion # vmware_workstation on Linux and Windows
