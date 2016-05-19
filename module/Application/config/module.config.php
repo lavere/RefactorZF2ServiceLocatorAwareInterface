@@ -52,6 +52,16 @@ return array(
                     ),
                 ),
             ),
+            'application-details' => [
+                'type' => 'Literal',
+                'options' => [
+                    'route'    => '/application-details',
+                    'defaults' => [
+                        'controller' => \Application\Controller\ApplicationDetailsController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ),
     ),
     'service_manager' => array(
@@ -75,6 +85,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
+            \Application\Controller\ApplicationDetailsController::class => \Application\Controller\ApplicationDetailsController::class,
             'Application\Controller\Index' => Controller\IndexController::class
         ),
     ),
