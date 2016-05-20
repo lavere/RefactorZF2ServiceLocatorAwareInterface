@@ -62,6 +62,16 @@ return array(
                     ],
                 ],
             ],
+            'application-details-refactored' => [
+                'type' => 'Literal',
+                'options' => [
+                    'route'    => '/application-details-refactored',
+                    'defaults' => [
+                        'controller' => \Application\Controller\ApplicationDetailsRefactoredController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ),
     ),
     'service_manager' => array(
@@ -84,6 +94,9 @@ return array(
         ),
     ),
     'controllers' => array(
+        'factories' => array(
+            \Application\Controller\ApplicationDetailsRefactoredController::class => \Application\Controller\Factory\ApplicationDetailsRefactoredControllerFactory::class,
+        ),
         'invokables' => array(
             \Application\Controller\ApplicationDetailsController::class => \Application\Controller\ApplicationDetailsController::class,
             'Application\Controller\Index' => Controller\IndexController::class
